@@ -1,0 +1,27 @@
+<mat-toolbar>
+  <img class="logo" alt="ATF Labs Logo" src="assets/img/logo-blue.png" />
+
+  <span class="spacer"></span>
+
+  <div>
+    <button mat-button routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Home</button>
+    <button mat-button routerLink="/about-us" routerLinkActive="active">About us</button>
+    <button mat-button routerLink="/memories" routerLinkActive="active">Memories</button>
+    <button mat-button routerLink="/services" routerLinkActive="active">Service</button>
+    <button mat-button routerLink="/contact-us" routerLinkActive="active">Contact</button>
+
+    <ng-container *ngIf="isDarkModeSupported">
+      <mat-divider vertical class="vertical-divider"></mat-divider>
+
+      <button mat-button disabled>
+        <mat-icon [ngClass]="isDarkModeEnabled.value ? 'grey-color' : 'sun-color'">wb_sunny</mat-icon>
+      </button>
+
+      <mat-slide-toggle [formControl]="isDarkModeEnabled"></mat-slide-toggle>
+
+      <button mat-button disabled>
+        <mat-icon [ngClass]="isDarkModeEnabled.value ? 'moon-color' : 'grey-color'">bedtime</mat-icon>
+      </button>
+    </ng-container>
+  </div>
+</mat-toolbar>

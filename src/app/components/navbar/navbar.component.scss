@@ -1,0 +1,36 @@
+mat-toolbar {
+  height          : auto;
+  background-color: var(--bg-color) !important;
+  border          : 1px solid var(--border-color);
+}
+
+.logo {
+  width  : 128px;
+  padding: 1rem 1.5rem;
+}
+
+.active {
+  color: var(--accent-color);
+}
+
+.spacer {
+  flex: 1 1 auto;
+}
+
+.vertical-divider {
+  background-color: var(--border-color);
+  display         : inline;
+  margin          : 0 5px 0 10px;
+}
+
+.sun-color {
+  color: orange;
+}
+
+.moon-color {
+  color: var(--accent-color);
+}
+
+.grey-color {
+  color: grey;
+}
