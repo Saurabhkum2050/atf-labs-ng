@@ -1,1 +1,78 @@
-<p>footer works!</p>
+<div class="footer px-4 pt-4">
+  <div class="row my-4">
+
+    <div class="col-md-4">
+      <div class="px-4">
+        <img id="footerLogo" src="/assets/img/logo-blue.png" class="mb-4" width="128" alt="Logo">
+        <p class="text-justify">
+          Alliance Labs is professional capital markets/software Development Company based in India that endeavours to
+          highly proficient, timely delivered and cost effective solutions.
+        </p>
+      </div>
+    </div>
+
+    <div class="col-md-2 offset-md-1">
+      <div class="px-4">
+        <p class="h3 mb-4">Quick Link</p>
+        <ul class="px-1">
+          <li>
+            <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Home</a>
+          </li>
+          <li>
+            <a routerLink="/about-us" routerLinkActive="active">About us</a>
+          </li>
+          <li>
+            <a routerLink="/memories" routerLinkActive="active">Memories</a>
+          </li>
+          <li>
+            <a routerLink="/services" routerLinkActive="active">Service</a>
+          </li>
+          <li>
+            <a routerLink="/contact-us" routerLinkActive="active">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="col-md-5">
+      <div class="px-4">
+        <p class="h3 mb-4">Contact</p>
+        <ul class="px-1">
+          <li><a target="_blank" href="tel:{{contact}}">{{contact}}</a></li>
+          <li><a target="_blank" href="mailto:{{email}}">{{email}}</a></li>
+          <li><a>{{address}}</a></li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
+
+  <p class="copyright m-0 text-center py-3 text-sm">
+    © Copyrights 2021. Alliance Labs All Rights Reserved
+  </p>
+</div>
+
+<!-- <footer class="row m-0">
+   <div class="row col-12 py-4 my-4">
+     <div class="col-md-4">
+       123
+     </div>
+     <div class="col-md-4">
+       123
+     </div>
+     <div class="col-md-4">
+       <ul>
+         <li>
+           <p class="footer-title">Contact</p>
+         </li>
+         <li>
+           <a href="#!" class="footer-detail">+91-8126394316</a>
+         </li>
+       </ul>
+     </div>
+   </div>
+
+  <p id="copyright" class="col-12 m-0">
+    © Copyrights 2021. Alliance Labs All Rights Reserved
+  </p>
+</footer> -->

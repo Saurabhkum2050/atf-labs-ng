@@ -55,16 +55,26 @@ export class AppComponent implements OnInit, OnDestroy {
     if (isDarkModeEnabled) {
       // Dark Mode
       this.className = darkModeClassName;
+      this.elementRef.nativeElement.ownerDocument.body.style.setProperty('--header-footer-bg-color', '#191919');
       this.elementRef.nativeElement.ownerDocument.body.style.setProperty('--bg-color', '#191919');
       this.elementRef.nativeElement.ownerDocument.body.style.setProperty('--border-color', '#2B2B2B');
       this.elementRef.nativeElement.ownerDocument.body.style.setProperty('--scrollbar-color', '#393939');
+      this.elementRef.nativeElement.ownerDocument.body.style.setProperty('--text-color', '#757575');
+      this.elementRef.nativeElement.ownerDocument.body.style.setProperty('--timeline-content-bg-color', '#202020');
+      this.elementRef.nativeElement.ownerDocument.body.style.setProperty('--timeline-date-bg-color', 'rgba(43, 43, 43, 0.96)');
+      this.elementRef.nativeElement.ownerDocument.body.style.setProperty('--copyright-color', '#424242');
       this.overlay.getContainerElement().classList.add(darkModeClassName);
     } else {
       // Light Mode
       this.className = '';
+      this.elementRef.nativeElement.ownerDocument.body.style.setProperty('--header-footer-bg-color', '#FFFFFF');
       this.elementRef.nativeElement.ownerDocument.body.style.setProperty('--bg-color', '#F8F8F8');
       this.elementRef.nativeElement.ownerDocument.body.style.setProperty('--border-color', '#E5E5E5');
       this.elementRef.nativeElement.ownerDocument.body.style.setProperty('--scrollbar-color', '#C6C6C6');
+      this.elementRef.nativeElement.ownerDocument.body.style.setProperty('--text-color', '#212529');
+      this.elementRef.nativeElement.ownerDocument.body.style.setProperty('--timeline-content-bg-color', '#ffffff');
+      this.elementRef.nativeElement.ownerDocument.body.style.setProperty('--timeline-date-bg-color', 'rgba(0, 189, 255, 0.8)');
+      this.elementRef.nativeElement.ownerDocument.body.style.setProperty('--copyright-color', '#6C757D');
       this.overlay.getContainerElement().classList.remove(darkModeClassName);
     }
   }
