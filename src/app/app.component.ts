@@ -3,6 +3,7 @@ import { Component, ElementRef, HostBinding, OnDestroy, OnInit } from '@angular/
 import { FormControl } from '@angular/forms';
 import { Subscription } from 'rxjs';
 import { tap } from 'rxjs/operators';
+import * as AOS from 'aos';
 
 @Component({
   selector: 'app-root',
@@ -21,6 +22,12 @@ export class AppComponent implements OnInit, OnDestroy {
   ) { }
 
   ngOnInit(): void {
+    // Init Animate On Scroll Animations
+    AOS.init({
+      duration: 500
+    });
+
+    // Detect Dark Mode
     if (window.matchMedia('(prefers-color-scheme)').media !== 'not all') {
       // console.log('🎉 Dark mode is supported');
       this.isDarkModeSupported = true;
